@@ -34,4 +34,46 @@ body.dark {
 
 body {
   font-family: 'Space Mono', monospace;
+  background-color: var(--primary-bg);
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 3.9rem;
+  color: var(--logo);
+}
+
+header .theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+header .theme-toggle span {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  margin-right: 1.6rem;
+}
+
+body.light header .theme-toggle .theme-icon {
+  content: url('./assets/icon-moon.svg');
+}
+
+body.dark header .theme-toggle .theme-icon {
+  content: url('./assets/icon-sun.svg');
 }
