@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-  devfinder
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body class="light">
+    <header>
+      <div class="logo"></div>
+      <div class="theme-toggle">
+        <span>Dark</span>
+        <div class="theme-icon"></div>
+      </div>
+    </header>
 
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+    <main>
+      <form>
+        <div class="input-field">
+          <div class="search-icon"><img src="./assets/icon-search.svg" alt="search icon" /></div>
+          <input type="text" class="text" id="text" />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar"></div>
+          <div class="name">The <span>octocat</span></div>
+          <a href="#">@<span>octocat</span></a>
+          <div class="date">Joined <span>Joined 25 Jan 2011</span></div>
+        </div>
+        <div class="bio">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+        </div>
+        <div class="stats">
+          <div class="repos">
+            <p>Repos</p>
+            <p class="repos-stat">0</p>
+          </div>
+          <div class="followers">
+            <p>Followers</p>
+            <p class="followers-stat">0</p>
+          </div>
+          <div class="following">
+            <p>Following</p>
+            <p class="following-stat">0</p>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="location">
+            <div class="location-icon"></div>
+            <p>Not Available</p>
+          </div>
+          <div class="website">
+            <div class="website-icon"></div>
+            <p>Not Available</p>
+          </div>
+          <div class="twitter">
+            <div class="twitter-icon"></div>
+            <p>Not Available</p>
+          </div>
+          <div class="company">
+            <div class="company-icon"></div>
+            <p>Not Available</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
