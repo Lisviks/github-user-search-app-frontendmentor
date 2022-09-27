@@ -46,6 +46,10 @@ body {
   margin: 0 auto;
 }
 
+header {
+  margin-top: 3rem;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
@@ -258,6 +262,22 @@ main .card .contact .twitter .icon {
 
 main .card .contact .company .icon {
   background-image: url('./assets/icon-company.svg');
+}
+
+body.dark main .card .contact .location .icon {
+  background-image: url('./assets/icon-location-white.svg');
+}
+
+body.dark main .card .contact .website .icon {
+  background-image: url('./assets/icon-website-white.svg');
+}
+
+body.dark main .card .contact .twitter .icon {
+  background-image: url('./assets/icon-twitter-white.svg');
+}
+
+body.dark main .card .contact .company .icon {
+  background-image: url('./assets/icon-company-white.svg');
 }
 
 main .card .contact p {
