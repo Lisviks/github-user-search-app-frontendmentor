@@ -39,6 +39,7 @@ body.dark {
 body {
   font-family: 'Space Mono', monospace;
   background-color: var(--primary-bg);
+  transition: all 0.3s ease;
 }
 
 .container {
