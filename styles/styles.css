@@ -79,11 +79,11 @@ header .theme-toggle span {
 }
 
 body.light header .theme-toggle .theme-icon {
-  content: url('./assets/icon-moon.svg');
+  content: url('../assets/icon-moon.svg');
 }
 
 body.dark header .theme-toggle .theme-icon {
-  content: url('./assets/icon-sun.svg');
+  content: url('../assets/icon-sun.svg');
 }
 
 main {
@@ -250,35 +250,35 @@ main .card .contact .icon {
 }
 
 main .card .contact .location .icon {
-  background-image: url('./assets/icon-location.svg');
+  background-image: url('../assets/icon-location.svg');
 }
 
 main .card .contact .website .icon {
-  background-image: url('./assets/icon-website.svg');
+  background-image: url('../assets/icon-website.svg');
 }
 
 main .card .contact .twitter .icon {
-  background-image: url('./assets/icon-twitter.svg');
+  background-image: url('../assets/icon-twitter.svg');
 }
 
 main .card .contact .company .icon {
-  background-image: url('./assets/icon-company.svg');
+  background-image: url('../assets/icon-company.svg');
 }
 
 body.dark main .card .contact .location .icon {
-  background-image: url('./assets/icon-location-white.svg');
+  background-image: url('../assets/icon-location-white.svg');
 }
 
 body.dark main .card .contact .website .icon {
-  background-image: url('./assets/icon-website-white.svg');
+  background-image: url('../assets/icon-website-white.svg');
 }
 
 body.dark main .card .contact .twitter .icon {
-  background-image: url('./assets/icon-twitter-white.svg');
+  background-image: url('../assets/icon-twitter-white.svg');
 }
 
 body.dark main .card .contact .company .icon {
-  background-image: url('./assets/icon-company-white.svg');
+  background-image: url('../assets/icon-company-white.svg');
 }
 
 main .card .contact p {
