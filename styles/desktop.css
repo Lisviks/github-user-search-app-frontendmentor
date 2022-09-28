@@ -30,4 +30,51 @@
     text-align: right;
     align-self: center;
   }
+
+  main .card .bio {
+    margin-top: 0;
+    margin-left: 15.4rem;
+  }
+
+  main .card .stats {
+    padding: 1.5rem 8.3rem 1.7rem 3.2rem;
+    margin-left: 15.4rem;
+  }
+
+  main .card .contact {
+    margin-top: 3.7rem;
+    margin-left: 15.4rem;
+  }
+
+  main .card .contact .location .icon {
+    background-image: url('./assets/icon-location.svg');
+  }
+
+  main .card .contact .website .icon {
+    background-image: url('./assets/icon-website.svg');
+  }
+
+  main .card .contact .twitter .icon {
+    background-image: url('./assets/icon-twitter.svg');
+  }
+
+  main .card .contact .company .icon {
+    background-image: url('./assets/icon-company.svg');
+  }
+
+  body.dark main .card .contact .location .icon {
+    background-image: url('./assets/icon-location-white.svg');
+  }
+
+  body.dark main .card .contact .website .icon {
+    background-image: url('./assets/icon-website-white.svg');
+  }
+
+  body.dark main .card .contact .twitter .icon {
+    background-image: url('./assets/icon-twitter-white.svg');
+  }
+
+  body.dark main .card .contact .company .icon {
+    background-image: url('./assets/icon-company-white.svg');
+  }
 }
