@@ -1,3 +1,5 @@
+// Theme START
+
 const body = document.querySelector('body');
 const themeBtn = document.querySelector('.theme-toggle');
 const themeBtnText = document.querySelector('.theme-toggle span');
@@ -35,3 +37,20 @@ themeBtn.addEventListener('click', () => {
     setLightTheme();
   }
 });
+
+// Theme END
+
+// Form START
+
+const form = document.querySelector('form');
+const input = document.querySelector('.text');
+
+input.addEventListener('input', () => {
+  if (input.value === '') {
+    input.classList.remove('not-empty');
+  } else {
+    input.classList.add('not-empty');
+  }
+});
+
+// Form END

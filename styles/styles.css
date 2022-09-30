@@ -115,7 +115,7 @@ main form .input-field input {
   height: 100%;
 }
 
-main form .input-field input:focus ~ label {
+main form .input-field input.not-empty ~ label {
   display: none;
 }
 
