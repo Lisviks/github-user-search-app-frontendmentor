@@ -110,6 +110,9 @@ main form .input-field {
 main form .input-field input {
   padding: 1.8rem 9.8rem 1.7rem 4.5rem;
   border: none;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: var(--logo);
   background-color: transparent;
   width: 100%;
   height: 100%;
