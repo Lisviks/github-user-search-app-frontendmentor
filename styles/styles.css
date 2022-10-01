@@ -155,6 +155,18 @@ main form .input-field .btn {
   right: 0.7rem;
 }
 
+main form .input-field .error {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #f74646;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 9rem;
+  display: none;
+}
+
 main .card {
   margin-top: 1.6rem;
   background-color: var(--secondary-bg);

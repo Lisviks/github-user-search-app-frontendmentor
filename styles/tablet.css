@@ -35,6 +35,10 @@
     right: 1rem;
   }
 
+  main form .input-field .error {
+    right: 12rem;
+  }
+
   main .card {
     margin-top: 2.4rem;
     padding: 4rem;
