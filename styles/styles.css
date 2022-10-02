@@ -301,8 +301,10 @@ body.dark main .card .contact .company .icon {
   background-image: url('../assets/icon-company-white.svg');
 }
 
-main .card .contact p {
+main .card .contact p,
+main .card .contact a {
   font-size: 1.3rem;
   line-height: 1.9rem;
   color: var(--secondary-text);
+  text-decoration: none;
 }

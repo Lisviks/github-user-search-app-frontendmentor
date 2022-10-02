@@ -54,7 +54,7 @@ const followersElement = document.querySelector('.followers-stat');
 const followingElement = document.querySelector('.following-stat');
 const locationElement = document.querySelector('.location p');
 const websiteElement = document.querySelector('.website p');
-const twitterElement = document.querySelector('.twitter p');
+const twitterElement = document.querySelector('.twitter a');
 const companyElement = document.querySelector('.company p');
 const githubUrlElement = document.querySelector('.github-url');
 
@@ -118,6 +118,9 @@ form.addEventListener('submit', async (e) => {
   updateContactInfo(user.blog, websiteElement);
   updateContactInfo(user.twitter_username, twitterElement);
   updateContactInfo(user.company, companyElement);
+
+  twitterElement.href = `https://twitter.com/${user.twitter_username}`;
+  twitterElement.target = '_blank';
 });
 
 // Form END

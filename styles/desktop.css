@@ -61,7 +61,8 @@
     background-color: #60abff;
   }
 
-  main .card .contact > div:hover p {
+  main .card .contact > div:hover p,
+  main .card .contact > div:hover a {
     text-decoration: underline;
   }
 }
