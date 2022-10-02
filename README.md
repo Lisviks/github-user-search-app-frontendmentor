@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [URL]()
+- Solution URL: [URL](https://www.frontendmentor.io/solutions/github-user-search-app-hKKp-CUrAC)
 - Live Site URL: [URL](https://lisviks.github.io/github-user-search-app-frontendmentor/)
 
 ## My process
