@@ -57,6 +57,7 @@ const websiteElement = document.querySelector('.website p');
 const twitterElement = document.querySelector('.twitter a');
 const companyElement = document.querySelector('.company p');
 const githubUrlElement = document.querySelector('.github-url');
+const errorElement = document.querySelector('.error');
 
 const checkInputEmpty = () => {
   if (input.value === '') {
@@ -101,26 +102,31 @@ const formatDate = (unformattedDate) => {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   const user = await getUser(input.value);
 
-  avatarElement.src = user.avatar_url;
-  avatarElement.style.display = 'block';
-  nameElement.innerText = user.login;
-  bioElement.innerText = user.bio === null ? 'This profile has no bio' : user.bio;
-  reposElement.innerText = user.public_repos;
-  followersElement.innerText = user.followers;
-  followingElement.innerText = user.following;
-  githubUrlElement.innerText = `@${user.login.toLowerCase()}`;
-  githubUrlElement.href = user.html_url;
-  dateElement.innerText = `Joined ${formatDate(user.created_at)}`;
+  if (user.message && user.message.toLowerCase() === 'not found') {
+    errorElement.style.display = 'block';
+  } else {
+    avatarElement.src = user.avatar_url;
+    avatarElement.style.display = 'block';
+    nameElement.innerText = user.login;
+    bioElement.innerText = user.bio === null ? 'This profile has no bio' : user.bio;
+    reposElement.innerText = user.public_repos;
+    followersElement.innerText = user.followers;
+    followingElement.innerText = user.following;
+    githubUrlElement.innerText = `@${user.login.toLowerCase()}`;
+    githubUrlElement.href = user.html_url;
+    dateElement.innerText = `Joined ${formatDate(user.created_at)}`;
 
-  updateContactInfo(user.location, locationElement);
-  updateContactInfo(user.blog, websiteElement);
-  updateContactInfo(user.twitter_username, twitterElement);
-  updateContactInfo(user.company, companyElement);
+    updateContactInfo(user.location, locationElement);
+    updateContactInfo(user.blog, websiteElement);
+    updateContactInfo(user.twitter_username, twitterElement);
+    updateContactInfo(user.company, companyElement);
 
-  twitterElement.href = `https://twitter.com/${user.twitter_username}`;
-  twitterElement.target = '_blank';
+    twitterElement.href = `https://twitter.com/${user.twitter_username}`;
+    twitterElement.target = '_blank';
+  }
 });
 
 // Form END
