@@ -19,9 +19,12 @@ const setDarkTheme = () => {
 };
 
 const initTheme = () => {
+  console.log(window.matchMedia('(prefers-color-scheme: dark'));
   const currentTheme = localStorage.getItem('devfinder-theme');
 
-  if (currentTheme === null || currentTheme === 'light') {
+  if (currentTheme === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark').matches) {
+    setDarkTheme();
+  } else if (currentTheme === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: light').matches) {
     setLightTheme();
   } else if (currentTheme === 'dark') {
     setDarkTheme();
