@@ -58,12 +58,18 @@ const twitterElement = document.querySelector('.twitter p');
 const companyElement = document.querySelector('.company p');
 const githubUrlElement = document.querySelector('.github-url');
 
-input.addEventListener('input', () => {
+const checkInputEmpty = () => {
   if (input.value === '') {
     input.classList.remove('not-empty');
   } else {
     input.classList.add('not-empty');
   }
+};
+
+checkInputEmpty();
+
+input.addEventListener('input', () => {
+  checkInputEmpty();
 });
 
 const getUser = async (user) => {
