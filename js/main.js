@@ -56,6 +56,7 @@ const locationElement = document.querySelector('.location p');
 const websiteElement = document.querySelector('.website p');
 const twitterElement = document.querySelector('.twitter p');
 const companyElement = document.querySelector('.company p');
+const githubUrlElement = document.querySelector('.github-url');
 
 input.addEventListener('input', () => {
   if (input.value === '') {
@@ -93,6 +94,8 @@ form.addEventListener('submit', async (e) => {
   reposElement.innerText = user.public_repos;
   followersElement.innerText = user.followers;
   followingElement.innerText = user.following;
+  githubUrlElement.innerText = `@${user.login.toLowerCase()}`;
+  githubUrlElement.href = user.html_url;
 
   updateContactInfo(user.location, locationElement);
   updateContactInfo(user.blog, websiteElement);
