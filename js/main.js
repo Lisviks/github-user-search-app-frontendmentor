@@ -72,6 +72,16 @@ const getUser = async (user) => {
   return data;
 };
 
+const updateContactInfo = (contact, element) => {
+  if (!contact) {
+    element.parentElement.classList.add('not-available');
+    element.innerText = 'Not Available';
+  } else {
+    element.parentElement.classList.remove('not-available');
+    element.innerText = contact;
+  }
+};
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const user = await getUser(input.value);
@@ -83,10 +93,11 @@ form.addEventListener('submit', async (e) => {
   reposElement.innerText = user.public_repos;
   followersElement.innerText = user.followers;
   followingElement.innerText = user.following;
-  locationElement.innerText = user.location || 'Not Available';
-  websiteElement.innerText = user.blog || 'Not Available';
-  twitterElement.innerText = user.twitter_username || 'Not Available';
-  companyElement.innerText = user.company || 'Not Available';
+
+  updateContactInfo(user.location, locationElement);
+  updateContactInfo(user.blog, websiteElement);
+  updateContactInfo(user.twitter_username, twitterElement);
+  updateContactInfo(user.company, companyElement);
 });
 
 // Form END
