@@ -102,9 +102,9 @@ const formatDate = (unformattedDate) => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const user = await getUser(input.value);
-  console.log(user);
 
   avatarElement.src = user.avatar_url;
+  avatarElement.style.display = 'block';
   nameElement.innerText = user.login;
   bioElement.innerText = user.bio === null ? 'This profile has no bio' : user.bio;
   reposElement.innerText = user.public_repos;
