@@ -83,6 +83,16 @@ const updateContactInfo = (contact, element) => {
   }
 };
 
+const formatDate = (unformattedDate) => {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const date = new Date(unformattedDate);
+  const monthDay = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+  const formattedDate = `${monthDay} ${months[month]} ${year}`;
+  return formattedDate;
+};
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const user = await getUser(input.value);
@@ -96,6 +106,7 @@ form.addEventListener('submit', async (e) => {
   followingElement.innerText = user.following;
   githubUrlElement.innerText = `@${user.login.toLowerCase()}`;
   githubUrlElement.href = user.html_url;
+  dateElement.innerText = `Joined ${formatDate(user.created_at)}`;
 
   updateContactInfo(user.location, locationElement);
   updateContactInfo(user.blog, websiteElement);
