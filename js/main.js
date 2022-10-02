@@ -45,12 +45,48 @@ themeBtn.addEventListener('click', () => {
 const form = document.querySelector('form');
 const input = document.querySelector('.text');
 
+const avatarElement = document.querySelector('.avatar img');
+const nameElement = document.querySelector('.name');
+const dateElement = document.querySelector('.date');
+const bioElement = document.querySelector('.bio');
+const reposElement = document.querySelector('.repos-stat');
+const followersElement = document.querySelector('.followers-stat');
+const followingElement = document.querySelector('.following-stat');
+const locationElement = document.querySelector('.location p');
+const websiteElement = document.querySelector('.website p');
+const twitterElement = document.querySelector('.twitter p');
+const companyElement = document.querySelector('.company p');
+
 input.addEventListener('input', () => {
   if (input.value === '') {
     input.classList.remove('not-empty');
   } else {
     input.classList.add('not-empty');
   }
+});
+
+const getUser = async (user) => {
+  const res = await fetch(`https://api.github.com/users/${user}`);
+  const data = await res.json();
+
+  return data;
+};
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const user = await getUser(input.value);
+  console.log(user);
+
+  avatarElement.src = user.avatar_url;
+  nameElement.innerText = user.login;
+  bioElement.innerText = user.bio === null ? 'This profile has no bio' : user.bio;
+  reposElement.innerText = user.public_repos;
+  followersElement.innerText = user.followers;
+  followingElement.innerText = user.following;
+  locationElement.innerText = user.location || 'Not Available';
+  websiteElement.innerText = user.blog || 'Not Available';
+  twitterElement.innerText = user.twitter_username || 'Not Available';
+  companyElement.innerText = user.company || 'Not Available';
 });
 
 // Form END
